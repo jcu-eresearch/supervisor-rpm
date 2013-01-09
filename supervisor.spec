@@ -2,7 +2,7 @@
 Summary:  A System for Allowing the Control of Process State on UNIX
 Name: supervisor
 Version: 3.0
-%define prever a10
+%define prever b1
 Release: 0.5%{?prever:.%{prever}}%{?dist}
 
 License: ZPLv2.1 and BSD and MIT
@@ -64,7 +64,7 @@ fi
 
 %files
 %defattr(-,root,root,-)
-%doc README.txt LICENSES.txt TODO.txt CHANGES.txt COPYRIGHT.txt
+%doc LICENSES.txt TODO.txt CHANGES.txt COPYRIGHT.txt
 %dir %{_localstatedir}/log/%{name}
 %{_initrddir}/supervisord
 %{python_sitelib}/*

@@ -1,5 +1,5 @@
 #!/bin/sh
-version="3.0b1"
+version="3.0"
 package="supervisor-$version.tar.gz"
 
 rm -rf BUILD RPMS SRPMS tmp || true
@@ -7,7 +7,7 @@ mkdir -p BUILD RPMS SRPMS SOURCES
 
 if [ ! -f SOURCES/$package ];
 then
-	wget "http://pypi.python.org/packages/source/s/supervisor/$package" -O SOURCES/$package
+	wget "http://pypi.python.org/packages/source/s/supervisor/$package" -O SOURCES/$package --no-check-certificate
 	cp -f supervisord* SOURCES/
         cp -f supervisor.logrotate SOURCES/
 fi

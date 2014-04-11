@@ -15,3 +15,4 @@ sudo yum-builddep -y supervisor.spec
 spectool -g --directory=$PWD/SOURCES --define="_topdir $PWD" --define="_tmppath $PWD/tmp" --define="ver $version" supervisor.spec
 rpmbuild -ba --define="_topdir $PWD" --define="_tmppath $PWD/tmp" --define="ver $version" supervisor.spec
 
+rm -rf BUILD BUILDROOT SOURCES SPECS tmp || true

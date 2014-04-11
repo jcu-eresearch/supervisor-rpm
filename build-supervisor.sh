@@ -2,14 +2,16 @@
 version="3.0"
 package="supervisor-$version.tar.gz"
 
+sudo yum install -y \
+    rpm-build \
+    rpmdevtools \
+    yum-utils
+
+
 rm -rf BUILD RPMS SRPMS tmp || true
 mkdir -p BUILD RPMS SRPMS SOURCES
 
-if [ ! -f SOURCES/$package ];
-then
-	wget "http://pypi.python.org/packages/source/s/supervisor/$package" -O SOURCES/$package --no-check-certificate
-	cp -f supervisord* SOURCES/
-        cp -f supervisor.logrotate SOURCES/
-fi
-
+sudo yum-builddep -y supervisor.spec
+spectool -g --directory=$PWD/SOURCES --define="_topdir $PWD" --define="_tmppath $PWD/tmp" --define="ver $version" supervisor.spec
 rpmbuild -ba --define="_topdir $PWD" --define="_tmppath $PWD/tmp" --define="ver $version" supervisor.spec
+

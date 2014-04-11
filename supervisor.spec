@@ -8,7 +8,7 @@ Release: 0.1%{?prever:.%{prever}}%{?dist}
 License: ZPLv2.1 and BSD and MIT
 Group: System Environment/Base
 URL: http://supervisord.org/
-Source0: http://pypi.python.org/packages/source/s/%{name}/%{name}-%{version}%{?prever}.tar.gz
+Source0: https://pypi.python.org/packages/source/s/%{name}/%{name}-%{version}%{?prever}.tar.gz
 Source1: supervisord.init
 Source2: supervisord.conf
 Source3: supervisor.logrotate
@@ -77,6 +77,9 @@ fi
 %config(noreplace) %{_sysconfdir}/logrotate.d/supervisor
 
 %changelog
+* Fri Apr 11 2014 David Beitey <david@davidjb.com> - 3.0-0
+- Update to Supervisor 3.0
+- Update RPM configuration and build scripts
 * Mon Aug 01 2011 Nils Philippsen <nils@redhat.com> - 3.0-0.5.a10
 - require python-setuptools (#725191)
 

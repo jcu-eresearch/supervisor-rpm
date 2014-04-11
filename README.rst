@@ -9,6 +9,8 @@ CentOS VM and compile the RPMs, destroy it afterwards.  If you're not so
 inclined to use Vagrant, then you can use the ``build-supervisor.sh`` script
 directly on your own RHEL or CentOS VM.
 
+This has been tested with CentOS 6.5.
+
 Go!
 ---
 

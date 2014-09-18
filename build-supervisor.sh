@@ -1,5 +1,5 @@
 #!/bin/sh
-version="3.0"
+version="3.1.2"
 package="supervisor-$version.tar.gz"
 
 sudo yum install -y \

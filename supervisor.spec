@@ -77,6 +77,8 @@ fi
 %config(noreplace) %{_sysconfdir}/logrotate.d/supervisor
 
 %changelog
+* Thu Sep 18 2014 David Beitey <david@davidjb.com> - 3.1.2
+- Update to Supervisor 3.1.2
 * Fri Apr 11 2014 David Beitey <david@davidjb.com> - 3.0-0
 - Update to Supervisor 3.0
 - Update RPM configuration and build scripts
